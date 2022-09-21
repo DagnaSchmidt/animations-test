@@ -5,12 +5,17 @@
   font-family: var(--main-font);
 }
 
+a, li, button, input, textarea, select {
+  all: unset;
+}
+
 :root {
   --main-font: "Aref Ruqaa", serif;
   --main-color: #C62368;
   --secondary-color: #D17070;
   --text-color: #001220;
   --btn-color: #4E663F33;
+  --nav-color: #D17070;
   --w-regular: 400;
   --w-bold: 700;
   --s-small: 12px;
@@ -18,4 +23,135 @@
   --s-medium: 24px;
   --s-large: 36px;
   --btn-transform: ;
+  --box-shadow-btn: 0px 4px 4px rgba(0, 18, 32, 0.25);
+}
+
+.btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow-btn);
+  color: var(--text-color);
+  text-align: center;
+  background-color: var(--btn-color);
+}
+
+.bg-img {
+  height: 844px;
+  width: 780px;
+  position: absolute;
+  top: 0;
+  left: -114px;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+
+.container-iphone {
+  width: 390px;
+  height: 844px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  position: relative;
+  border-radius: 12px;
+}
+
+.header {
+  width: 390px;
+  height: 56px;
+  position: absolute;
+  bottom: 34px;
+  background-color: rgba(209, 112, 112, 0.2);
+}
+.header .nav {
+  width: 294px;
+  position: absolute;
+  top: 14px;
+  left: 48px;
+}
+.header .nav__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header .nav__item {
+  color: var(--text-color);
+  font-size: var(--s-medium);
+  text-align: center;
+}
+
+.main__img {
+  width: 390px;
+  height: 390px;
+  position: absolute;
+  top: 125px;
+  left: 195px;
+}
+.main__btn-shop {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  box-shadow: var(--box-shadow-btn);
+  position: absolute;
+  top: 62px;
+  left: 708px;
+  background-color: var(--btn-color);
+  color: var(--text-color);
+  text-align: center;
+}
+.main__btn__left {
+  position: absolute;
+  top: 125px;
+  left: 48px;
+  background-color: rgba(198, 35, 104, 0.6);
+  box-shadow: 0px 4px 4px rgba(250, 114, 104, 0.25);
+}
+.main__btn__right {
+  position: absolute;
+  top: 489px;
+  left: 708px;
+}
+.main__title {
+  font-weight: var(--w-bold);
+  color: var(--main-color);
+  font-size: var(--s-large);
+  line-height: 56px;
+  position: absolute;
+  left: 24px;
+  top: 570px;
+}
+.main__name {
+  font-weight: var(--w-bold);
+  color: var(--text-color);
+  font-size: var(--s-medium);
+  line-height: 38px;
+  text-align: right;
+  width: 342px;
+  position: absolute;
+  top: 542px;
+  left: 414px;
+}
+.main__artist {
+  font-weight: var(--w-regular);
+  color: var(--text-color);
+  font-size: var(--s-regular);
+  line-height: 25px;
+  text-align: right;
+  width: 342px;
+  position: absolute;
+  left: 414px;
+  top: 580px;
+}
+.main__description {
+  font-weight: var(--w-regular);
+  color: var(--text-color);
+  font-size: var(--s-small);
+  text-align: left;
+  width: 342px;
+  position: absolute;
+  left: 414px;
+  top: 630px;
+  line-height: 19px;
 }/*# sourceMappingURL=styles.css.map */

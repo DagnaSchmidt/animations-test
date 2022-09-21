@@ -5,6 +5,9 @@
     margin: 0;
     font-family: var(--main-font);
 }
+a, li, button, input, textarea, select {
+    all: unset;
+}
 
 //variables// 
 :root {
@@ -17,6 +20,7 @@
     --secondary-color: #D17070;
     --text-color: #001220;
     --btn-color: #4E663F33;
+    --nav-color: #D17070; 
 
     //font weights// 
     --w-regular: 400;
@@ -31,4 +35,146 @@
     //transformations// 
     --btn-transform: ;
 
+    //box shadow// 
+    --box-shadow-btn: 0px 4px 4px rgba(0, 18, 32, 0.25);
+
+}
+
+//reusables// 
+.btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-btn);
+    color: var(--text-color);
+    text-align: center;
+    background-color: var(--btn-color);
+}
+
+
+//BG IMAGE// 
+.bg-img {
+    height: 844px;
+    width: 780px;
+    position: absolute;
+    top: 0;
+    left: -114px;
+    z-index: -1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+//IPHONE SIZE// 
+.container-iphone {
+    width: 390px;
+    height: 844px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    position: relative;
+    border-radius: 12px;
+}
+
+//HEADER// 
+.header {
+    width: 390px;
+    height: 56px;
+    position: absolute;
+    bottom: 34px;
+    background-color: rgba(209, 112, 112, 0.2);
+    .nav {
+        width: 294px;
+        position: absolute;
+        top: 14px;
+        left: 48px;
+        &__items {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }  
+        &__item {
+            color: var(--text-color);
+            font-size: var(--s-medium);
+            text-align: center;
+        } 
+    }
+}
+
+//MAIN//
+.main {
+    &__img {
+        width: 390px;
+        height: 390px;
+        position: absolute;
+        top: 125px;
+        left: 195px;
+    }
+    &__btn-shop {
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        box-shadow: var(--box-shadow-btn);
+        position: absolute;
+        top: 62px;
+        left: 708px;
+        background-color: var(--btn-color);
+        color: var(--text-color);
+        text-align: center;
+    }
+    &__btn {
+        &__left {
+            position: absolute;
+            top: 125px;
+            left: 48px;
+            background-color: rgba(198, 35, 104, 0.6); //overwrite reusables
+            box-shadow: 0px 4px 4px rgba(250, 114, 104, 0.25); //overwrite reusables
+        }
+        &__right {
+            position: absolute;
+            top: 489px;
+            left: 708px;
+        }
+    }
+    &__title {
+        font-weight: var(--w-bold);
+        color: var(--main-color);
+        font-size: var(--s-large);
+        line-height: 56px;
+        position: absolute;
+        left: 24px;
+        top: 570px;
+    }
+    &__name {
+        font-weight: var(--w-bold);
+        color: var(--text-color);
+        font-size: var(--s-medium);
+        line-height: 38px;
+        text-align: right;
+        width: 342px;
+        position: absolute;
+        top: 542px;
+        left: 414px;
+    }
+    &__artist {
+        font-weight: var(--w-regular);
+        color: var(--text-color);
+        font-size: var(--s-regular);
+        line-height: 25px;
+        text-align: right;
+        width: 342px;
+        position: absolute;
+        left: 414px;
+        top: 580px;
+    }
+    &__description {
+        font-weight: var(--w-regular);
+        color: var(--text-color);
+        font-size: var(--s-small);
+        text-align: left;
+        width: 342px;
+        position: absolute;
+        left: 414px;
+        top: 630px;
+        line-height: 19px;
+    }
 }
