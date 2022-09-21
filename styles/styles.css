@@ -7,4 +7,15 @@
 
 :root {
   --main-font: "Aref Ruqaa", serif;
+  --main-color: #C62368;
+  --secondary-color: #D17070;
+  --text-color: #001220;
+  --btn-color: #4E663F33;
+  --w-regular: 400;
+  --w-bold: 700;
+  --s-small: 12px;
+  --s-regular: 16px;
+  --s-medium: 24px;
+  --s-large: 36px;
+  --btn-transform: ;
 }/*# sourceMappingURL=styles.css.map */
