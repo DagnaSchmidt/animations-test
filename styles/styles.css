@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font);
+}
+
+:root {
+  --main-font: "Aref Ruqaa", serif;
+}/*# sourceMappingURL=styles.css.map */
