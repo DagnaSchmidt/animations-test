@@ -238,6 +238,10 @@ a, li, button, input, textarea, select {
   left: 24px;
   top: 570px;
 }
+.main__title:hover {
+  color: var(--main-color);
+  transition: color 2s ease-in-out;
+}
 .main__name {
   font-weight: var(--w-bold);
   color: var(--text-color);

@@ -10,7 +10,6 @@ a, li, button, input, textarea, select {
 }
 
 //ANIMATIONS// 
-
 //navigation// 
 @keyframes nav-item-hover {
     0% {
@@ -21,7 +20,6 @@ a, li, button, input, textarea, select {
         scale: 1.3;
     }
 }
-
 //movements//
 @keyframes horse-movement {
     0% {
@@ -210,6 +208,10 @@ a, li, button, input, textarea, select {
         position: absolute;
         left: 24px;
         top: 570px;
+        &:hover {
+            color: var(--main-color);
+            transition: color 2s ease-in-out;
+        }
     }
     &__name {
         font-weight: var(--w-bold);
