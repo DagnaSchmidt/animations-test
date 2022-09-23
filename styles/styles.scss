@@ -20,7 +20,7 @@ a, li, button, input, textarea, select {
     --secondary-color: #D17070;
     --text-color: #001220;
     --btn-color: #4E663F33;
-    --nav-color: #D17070; 
+    --action-color: #fa7268; 
 
     //font weights// 
     --w-regular: 400;
@@ -96,6 +96,10 @@ a, li, button, input, textarea, select {
             color: var(--text-color);
             font-size: var(--s-medium);
             text-align: center;
+            &:hover {
+                animation: nav-item-hover 0.4s;
+                animation-fill-mode: forwards;
+            }
         } 
     }
 }
@@ -121,20 +125,32 @@ a, li, button, input, textarea, select {
         color: var(--text-color);
         text-align: center;
     }
-    &__btn {
-        &__left {
-            position: absolute;
-            top: 125px;
-            left: 48px;
-            background-color: rgba(198, 35, 104, 0.6); //overwrite reusables
-            box-shadow: 0px 4px 4px rgba(250, 114, 104, 0.25); //overwrite reusables
+
+    &__checkbox {
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        position: absolute;
+        top: 125px;
+        left: 48px;
+        background-color: rgba(198, 35, 104, 0.6);
+        box-shadow: 0px 4px 4px rgba(250, 114, 104, 0.25);
+        &:hover {
+            animation: checkbox-hover 0.4s;
+            animation-fill-mode: forwards;
         }
+        &:checked {
+            left: -48px;
+        }
+        &:checked ~ .main__img {
+            left: 0px;
+        }
+    }
         &__right {
             position: absolute;
             top: 489px;
             left: 708px;
         }
-    }
     &__title {
         font-weight: var(--w-bold);
         color: var(--main-color);
@@ -176,5 +192,48 @@ a, li, button, input, textarea, select {
         left: 414px;
         top: 630px;
         line-height: 19px;
+    }
+}
+
+
+//ANIMATIONS// 
+
+@keyframes nav-item-hover {
+    0% {
+        color: var(--text-color);
+    }
+    100% {
+        color: var(--action-color);
+        scale: 1.3;
+    }
+}
+
+@keyframes btn-left-hover {
+    0% {
+        left: 48px;
+    }
+    100% {
+        scale: 1.3;
+        background-color: var(--action-color);
+        left: -48px;
+    }
+}
+
+@keyframes horse-movement {
+    0% {
+        left: 195px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes checkbox-hover {
+    0% {
+
+    }
+    100% {
+        scale: 1.3;
+        background-color: var(--action-color);
     }
 }
